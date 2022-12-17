@@ -11,10 +11,14 @@
     <h1>Daftar pendonor</h1>
 
     @foreach ($pendaftar as $p)
-    <div>
-        <p>Nama: {{$p->nama}}</p>
-        <p>Keterangan: {{$p->persyaratan}}</p>
-    </div>
+      @foreach ($persyaratan as $pr) 
+      @if ($pr->id == $p->id_persyaratan)          
+        <div>
+          <p>Nama: {{$p->nama}}</p>
+          <p>Keterangan: {{$pr->list}}</p>
+        </div>
+      @endif
+      @endforeach
     @endforeach
         
     <a href="#"><button>Detail</button></a>

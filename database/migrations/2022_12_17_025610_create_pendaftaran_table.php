@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('jenis_kelamin', 10);
             $table->date('tanggal_lahir');
             $table->string('alamat', 50);
+            $table->integer('status');
             $table->timestamps();
         });
     }

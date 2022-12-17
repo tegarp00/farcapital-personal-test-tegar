@@ -16,7 +16,7 @@ class PersyaratanController extends Controller
     {
         $payload = [
 
-            'list' => $request->input('masukkan')
+            'list' => $request->input('jpenyakit')
         ];
 
 
